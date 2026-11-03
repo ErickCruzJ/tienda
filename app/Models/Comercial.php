@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Comercial extends Model
 {
     protected $table = 'comercial';
-    
+
+    protected $primaryKey = 'id';
+
+    public $incrementing = false;
+
     public $timestamps = false;
 
-    protected $fillabe = [
+    protected $fillable = [
+        'id',
         'nombre',
         'apellido1',
         'apellido2',
