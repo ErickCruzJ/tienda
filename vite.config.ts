@@ -29,6 +29,16 @@ export default defineConfig({
         }),
     ]),
     server: {
+        host: '0.0.0.0',
+        port: 5173,
+        strictPort: true,
+        cors:{
+            origin: 'http://192.168.1.189:8000',
+        },
+
+        hmr:{
+            host: '192.168.1.189',   
+        },
         watch: {
             ignored: [
                 '**/.agents/**',

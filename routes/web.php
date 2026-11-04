@@ -6,7 +6,7 @@ use App\Http\Controllers\ComercialController;
 use App\Http\Controllers\PedidoController;
 
 
-Route::inertia('/', 'welcome')->name('home');
+Route::redirect('/', '/clientes')->name('home');
 Route::resource('clientes', ClienteController::class);
 Route::resource('comerciales', ComercialController::class);
 Route::resource('pedidos', PedidoController::class);

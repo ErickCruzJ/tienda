@@ -38,7 +38,7 @@ class ClienteController extends Controller
             'apellido1' => 'required|string|max:100',
             'apellido2' => 'nullable|string|max:100',
             'ciudad' => 'required|string|max:100',
-            'categoria' => 'nullable|interger',
+            'categoria' => 'nullable|integer',
         ]);
 
         Cliente::create($datos);
@@ -70,7 +70,7 @@ class ClienteController extends Controller
     public function update(Request $request, string $id)
     {
         $cliente = Cliente::findOrFail($id);
-        
+
         $datos = $request->validate([
             'nombre' => 'required|string|max:100',
             'apellido1' => 'required|string|max:100',
